@@ -52,7 +52,6 @@ void ATest::Tick(float DeltaTime)
 
 void ATest::OnActorBump(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit)
 {
-    UE_LOG(LogTemp, Log, TEXT("aaaa"));
     IsPress = true;
 }
 

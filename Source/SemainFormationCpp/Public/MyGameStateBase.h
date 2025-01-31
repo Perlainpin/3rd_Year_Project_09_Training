@@ -32,8 +32,12 @@ protected:
 	void ChangeActualLevel();
 
 public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	void AddFirstSateKey();
 	int32 GetFirstStateKey();
 	FName GetActuaLevel();
 	FName GetActualState();
+	void TriggerStateChange();
 };

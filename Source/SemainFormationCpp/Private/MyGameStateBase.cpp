@@ -15,16 +15,24 @@ void AMyGameStateBase::BeginPlay() {
 	};
 };
 
+void AMyGameStateBase::Tick(float DeltaTime) {
+	FirstStateNulberOfKeyCheck();
+	ChangeActualState();
+	ChangeActualLevel();
+}
+
 void AMyGameStateBase::ChangeActualState() {
 	if (StateIndex < ListOfState[ListOfLevel[LevelIndex]].Num()) {
 		LevelIndex++;
 		StateIndex = 0;
 	}
 	ActualState = ListOfState[ListOfLevel[LevelIndex]][StateIndex];
+	UE_LOG(LogTemp, Log, TEXT("ChangeState"));
 };
 
 void AMyGameStateBase::ChangeActualLevel() {
 	ActualLevel = ListOfLevel[LevelIndex];
+	UE_LOG(LogTemp, Log, TEXT("ChangeLevel"));
 }
 
 void AMyGameStateBase::AddFirstSateKey(){
@@ -50,8 +58,11 @@ void AMyGameStateBase::FirstStateNulberOfKeyCheck() {
 	if (ActualState == ListOfState[TEXT("VillageInTheTree")][0]) {
 		if (FirstStateNumberOfKey == FirstStateNeededNumberOfKey) {
 			StateIndex++;
-			UE_LOG(LogTemp, Log, TEXT("ChnageStateAfterKey"));
+			UE_LOG(LogTemp, Log, TEXT("ChangeStateAfterKey"));
 		}
 	};
-	
 };
+
+void AMyGameStateBase::TriggerStateChange() {
+	StateIndex++;
+}
