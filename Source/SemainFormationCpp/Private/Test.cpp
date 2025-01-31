@@ -45,6 +45,7 @@ void ATest::Tick(float DeltaTime)
         Door->SetActorLocation(FMath::Lerp(Door->WorldStartLocation, Door->WorldEndLocation, Door->LerpAlpha));
         if (Door->LerpStep > 0 && Door->LerpAlpha >= 1 || Door->LerpStep < 0 && Door->LerpAlpha <= 0) {
             Door->LerpStep *= -1;
+            IsPress = false;
         }
     }
 }
