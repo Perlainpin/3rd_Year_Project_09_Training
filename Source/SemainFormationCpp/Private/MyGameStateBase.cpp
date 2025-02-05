@@ -13,6 +13,7 @@ void AMyGameStateBase::BeginPlay() {
 		{ListOfLevel[0],{TEXT("FindTheKeys"),TEXT("OpenThe")}},
 		{ListOfLevel[1], {TEXT("Go")}}
 	};
+	UE_LOG(LogTemp, Log, TEXT("Game State Start"));
 };
 
 void AMyGameStateBase::Tick(float DeltaTime) {
