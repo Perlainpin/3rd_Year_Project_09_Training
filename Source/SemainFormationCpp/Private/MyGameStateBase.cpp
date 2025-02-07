@@ -14,8 +14,12 @@ AMyGameStateBase::AMyGameStateBase()
 		{ListOfLevel[0],{TEXT("FindTheKeys"),TEXT("OpenTheGate")}},
 		{ListOfLevel[1], {TEXT("Go")}}
 	};
-	UE_LOG(LogTemp, Log, TEXT("Game State Start"));
+	UE_LOG(State, Log, TEXT("Game State Start"));
 	UE_LOG(LogTemp, Warning, TEXT("My Name: %s"), *ListOfLevel[0].ToString());
+	UE_LOG(LogTemp, Warning, TEXT("My Name: %s"), *ListOfLevel[1].ToString());
+	UE_LOG(LogTemp, Warning, TEXT("My Name: %s"), *ListOfState[TEXT("EscapeTheOrkCamp")][0].ToString());
+	UE_LOG(LogTemp, Warning, TEXT("My Name: %s"), *ListOfState[TEXT("EscapeTheOrkCamp")][1].ToString());
+	UE_LOG(LogTemp, Warning, TEXT("My Name: %s"), *ListOfState[TEXT("PathToVictory")][0].ToString());
 }
 
 void AMyGameStateBase::BeginPlay()
