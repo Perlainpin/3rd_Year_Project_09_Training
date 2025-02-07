@@ -6,10 +6,8 @@
 #include "GameFramework/GameStateBase.h"
 #include "MyGameStateBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
+
 class SEMAINFORMATIONCPP_API AMyGameStateBase : public AGameStateBase
 {
 	GENERATED_BODY()
@@ -27,14 +25,15 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	void FirstStateNulberOfKeyCheck();
+	void FirstStateNumberOfKeyCheck();
 	void ChangeActualState();
 	void ChangeActualLevel();
 
 public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
+	AMyGameStateBase();
+
+	void UpdateState();
 	void AddFirstSateKey();
 	int32 GetFirstStateKey();
 	FName GetActuaLevel();

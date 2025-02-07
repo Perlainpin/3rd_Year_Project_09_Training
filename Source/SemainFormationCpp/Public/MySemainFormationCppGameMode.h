@@ -6,10 +6,8 @@
 #include "../SemainFormationCppGameMode.h"
 #include "MySemainFormationCppGameMode.generated.h"
 
-/**
- * 
- */
 UCLASS()
+
 class SEMAINFORMATIONCPP_API AMySemainFormationCppGameMode : public ASemainFormationCppGameMode
 {
 	GENERATED_BODY()
