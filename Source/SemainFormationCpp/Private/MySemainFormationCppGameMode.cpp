@@ -7,3 +7,15 @@
 AMySemainFormationCppGameMode::AMySemainFormationCppGameMode() {
 	GameStateClass = AMyGameStateBase::StaticClass();
 }
+
+void AMySemainFormationCppGameMode::StartPlay() {
+	StartPlayEvent();
+
+	GetWorld()->GetAuthGameMode()->GetGameState<AMyGameStateBase>();
+
+	Super::StartPlay();
+}
+
+void AMySemainFormationCppGameMode::StartPlayEvent() {
+
+}

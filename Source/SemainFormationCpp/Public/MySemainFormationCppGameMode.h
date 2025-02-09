@@ -15,4 +15,8 @@ class SEMAINFORMATIONCPP_API AMySemainFormationCppGameMode : public ASemainForma
 public:
 	AMySemainFormationCppGameMode();
 	virtual ~AMySemainFormationCppGameMode() = default;
+
+	virtual void StartPlay();
+
+	void StartPlayEvent();
 };

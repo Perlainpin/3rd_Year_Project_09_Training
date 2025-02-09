@@ -36,6 +36,7 @@ public:
 	void UpdateState();
 	void AddFirstSateKey();
 	int32 GetFirstStateKey();
+	int32 GetFirstStateNeededKey();
 	FName GetActuaLevel();
 	FName GetActualState();
 	void TriggerStateChange();
