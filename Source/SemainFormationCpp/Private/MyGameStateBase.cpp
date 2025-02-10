@@ -4,7 +4,7 @@
 
 AMyGameStateBase::AMyGameStateBase() 
 {
-
+	
 }
 
 void AMyGameStateBase::BeginPlay()
