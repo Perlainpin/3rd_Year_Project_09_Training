@@ -11,5 +11,6 @@ public class SemainFormationCppTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
 		ExtraModuleNames.Add("SemainFormationCpp");
-	}
+        ExtraModuleNames.Add("AdvancedWidgets");
+    }
 }
