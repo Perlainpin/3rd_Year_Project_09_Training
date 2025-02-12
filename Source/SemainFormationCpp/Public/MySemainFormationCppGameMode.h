@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "../SemainFormationCppGameMode.h"
+#include "Blueprint/UserWidget.h"
 #include "MySemainFormationCppGameMode.generated.h"
 
 UCLASS()
@@ -19,4 +20,13 @@ public:
 	virtual void StartPlay();
 
 	void StartPlayEvent();
+
+protected:
+	// Classe du Widget (modifiable dans l’éditeur)
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<class UUserWidget> MainMenuWidgetClass;
+
+private:
+	UPROPERTY()
+	UUserWidget* MainMenuWidget;
 };

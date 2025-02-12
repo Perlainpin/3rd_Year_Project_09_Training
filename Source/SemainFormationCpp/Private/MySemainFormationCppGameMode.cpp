@@ -14,6 +14,16 @@ void AMySemainFormationCppGameMode::StartPlay() {
 	GetWorld()->GetAuthGameMode()->GetGameState<AMyGameStateBase>();
 
 	Super::StartPlay();
+
+    if (MainMenuWidgetClass)
+    {
+        MainMenuWidget = CreateWidget<UUserWidget>(GetWorld(), MainMenuWidgetClass);
+
+        if (MainMenuWidget)
+        {
+            MainMenuWidget->AddToViewport();
+        }
+    }
 }
 
 void AMySemainFormationCppGameMode::StartPlayEvent() {
