@@ -26,10 +26,10 @@ public:
 	class UProgressBar* XPBar;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	class UEditableText* LevelText;
+	class UTextBlock* LevelText;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
-	class UEditableText* StateText;
+	class UTextBlock* StateText;
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 	class URadialSlider* TriSlider;

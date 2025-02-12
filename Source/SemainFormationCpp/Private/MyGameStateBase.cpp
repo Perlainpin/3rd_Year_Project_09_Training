@@ -48,7 +48,10 @@ void AMyGameStateBase::ChangeActualLevel() {
 void AMyGameStateBase::AddFirstSateKey(){
 	if (ActualState == ListOfState[TEXT("EscapeTheOrkCamp")][0]) {
 		FirstStateNumberOfKey++;
-	};
+	}
+	else {
+		return;
+	}
 };
 
 int32 AMyGameStateBase::GetFirstStateKey() {
@@ -70,7 +73,10 @@ FName AMyGameStateBase::GetActualState() {
 void AMyGameStateBase::FirstStateNumberOfKeyCheck() {
 	if (ActualState == ListOfState[TEXT("EscapeTheOrkCamp")][0] && FirstStateNumberOfKey == FirstStateNeededNumberOfKey){
 		StateIndex++;
-	};
+	}
+	else {
+		return;
+	}
 };
 
 void AMyGameStateBase::TriggerStateChange() {

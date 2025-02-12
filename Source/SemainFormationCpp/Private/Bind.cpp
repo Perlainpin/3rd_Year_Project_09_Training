@@ -2,7 +2,7 @@
 
 #include "Bind.h"
 #include "Components/ProgressBar.h"
-#include "Components/EditableText.h"
+#include "Components/TextBlock.h"
 #include "Components/RadialSlider.h"
 
 
@@ -19,6 +19,7 @@ void UBind::SetXP(float CurrentXP, float MaxXP) {
 
 void UBind::SetLevel(FText CurrentLevel) {
 	if (LevelText) {
+		UE_LOG(LogTemp, Warning, TEXT("Update UI level text"));
 		LevelText->SetText(CurrentLevel);
 	}
 }

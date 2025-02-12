@@ -19,14 +19,16 @@ public:
 
 	virtual void StartPlay();
 
-	void StartPlayEvent();
+	void ArrowsRainSlideRecharge(float deltatime);
+
+	void TriSpellSlideRecharge(float deltatime);
 
 protected:
 	// Classe du Widget (modifiable dans l’éditeur)
 	UPROPERTY(EditDefaultsOnly, Category = "UI")
-	TSubclassOf<class UUserWidget> MainMenuWidgetClass;
+	TSubclassOf<class UBind> MainMenuWidgetClass;
 
 private:
 	UPROPERTY()
-	UUserWidget* MainMenuWidget;
+	UBind* MainMenuWidget;
 };
