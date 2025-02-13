@@ -40,5 +40,5 @@ void AMySemainFormationCppGameMode::TriSpellSlideRecharge(float deltatime) {
     if (MainMenuWidget)
     {
         MainMenuWidget->SetTriSlider(deltatime);
-    }0
+    }
 }
